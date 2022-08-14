@@ -1,11 +1,14 @@
+function square(a) {
+    return(a * a)
+}
 
 function sum_square_largest_two(a, b, c) {
     return(
         a < b && a < c
-        ? (b*b) + (c*c)
+        ? square(b) + square(c)
         : b < a && b < c
-        ? (a*a) + (c*c)
-        : (a*a) + (b*b)
+        ? square(a) + square(c)
+        : square(a) + square(b)
         );
 }
 
