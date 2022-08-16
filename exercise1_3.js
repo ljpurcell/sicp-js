@@ -1,5 +1,7 @@
+// Exercise 1.3
+
 function square(a) {
-    return(a * a)
+    return(a * a);
 }
 
 function sum_square_largest_two(a, b, c) {
@@ -13,7 +15,10 @@ function sum_square_largest_two(a, b, c) {
 }
 
 
-sum_square_largest_two(10, 4, 10);
-
 // Alternative solution: square all arguments, sum,  
 // and then subtract square of smallest from result
+
+function sum_square_largest_two_B(a, b, c) {
+    return square(a) + square(b) + square(c)
+           - square(a < b ? (a < c ? a : c) : (b < c ? b : c));
+}
