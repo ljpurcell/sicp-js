@@ -22,7 +22,6 @@ function accumulate_r(combiner, null_value, term, a, next, b) {
            : combiner(term(a), accumulate_r(combiner, null_value, term, next(a), next, b));
 }
 
-
 // Sum and Product defined in terms of Accumulate
 function sum(term, a, next, b) {
     return accumulate_r(add, 0, term, a, next, b);
